@@ -57,7 +57,6 @@ RUN yum install curl -y && \
 #RUN cd /tmp && wget https://dl.bintray.com/rundeck/rundeck-maven/rundeck-3.0.23-20190619.war -o rundeck.war
 
 ADD https://tomcat.apache.org/tomcat-8.5-doc/appdev/sample/sample.war $CATALINA_HOME/webapps/  
-#http://nexus.edi.cerner.corp/content/repositories/releases/com/cerner/edi/dep/edi-dep-tool-war/3.6.44.4/edi-dep-tool-war-3.6.44.4.war $CATALINA_HOME/webapps/
 #https://dl.bintray.com/rundeck/rundeck-maven/rundeck-3.0.23-20190619.war $CATALINA_HOME/webapps/
 
 RUN chmod 755 $CATALINA_HOME/webapps/*.war && \
@@ -70,5 +69,4 @@ EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
 
-#cd /tmp && wget http://nexus.edi.cerner.corp/content/repositories/releases/com/cerner/edi/dep/edi-dep-tool-war/3.6.44.4/edi-dep-tool-war-3.6.44.4.war -o /tmp/dep.war && \
 # cp /tmp/dep.war $CATALINA_HOME/webapps/
